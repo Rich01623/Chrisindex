@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QTS Portal - WIP Projects</title>
+    <style>
+        :root {
+            /* Dark blue color palette */
+            --bg-color: #0b1320;      /* Deepest blue for the background */
+            --card-color: #152238;    /* Slightly lighter blue for the cards */
+            --border-color: #1e3a5f;  /* Accent border */
+            --text-main: #f1f5f9;     /* Off-white for high readability */
+            --text-muted: #94a3b8;    /* Muted text for empty states */
+            --hover-color: #2563eb;   /* Bright blue for interaction */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .card {
+            background-color: var(--card-color);
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--hover-color);
+            border-radius: 10px;
+            padding: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .link-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .link-list a {
+            display: block;
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 10px 12px;
+            margin-bottom: 8px;
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 6px;
+            transition: background-color 0.2s, padding-left 0.2s;
+        }
+
+        .link-list a:hover {
+            background-color: var(--hover-color);
+            padding-left: 16px; /* Smooth indent effect on hover */
+        }
+
+        .empty-state {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-style: italic;
+            padding: 10px 0;
+            border-bottom: 1px dashed rgba(148, 163, 184, 0.2);
+            margin-bottom: 5px;
+        }
+        
+        .empty-state:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Work In Progress</h1>
+        <p class="subtitle">Development Dashboard</p>
+    </header>
+
+    <div class="grid-container">
+        
+        <!-- Planners Card -->
+        <div class="card">
+            <h2>Planners</h2>
+            <ul class="link-list" id="planners-links">
+                <li><a href="https://rich01623.github.io/chrisplanner/" target="_blank">Latest Planner</a></li>
+                <li><a href="https://rich01623.github.io/Planner/" target="_blank">Original planner</a></li>
+                <li><a href="https://rich01623.github.io/jonstool/" target="_blank">PalletForce Route Planner</a></li>
+            </ul>
+        </div>
+
+        <!-- Rate Cards Card -->
+        <div class="card">
+            <h2>Rate Cards</h2>
+            <ul class="link-list" id="rate-cards-links">
+                <li><a href="https://rich01623.github.io/ratetest/" target="_blank">general Rate card</a></li>
+                <li><a href="https://rich01623.github.io/lasershape/" target="_blank">laserShape rate card</a></li>
+                <li><a href="https://rich01623.github.io/FTS-Customer-Portal/" target="_blank">QTS rate card</a></li>
+                <li><a href="https://rich01623.github.io/xact-packing/" target="_blank">xact Packing rate card</a></li>
+            </ul>
+        </div>
+
+        <!-- Maintenance & Compliance Card -->
+        <div class="card">
+            <h2>Maintenance & Compliance</h2>
+            <ul class="link-list" id="maintenance-links">
+                <li><a href="https://rich01623.github.io/Maintenance/" target="_blank">Maintenance dashboard</a></li>
+                <li><a href="https://rich01623.github.io/JCCPortal/" target="_blank">Frost Connect upload portal</a></li>
+                <li><a href="https://rich01623.github.io/PMIREPORT/" target="_blank">JCC Inspection portal</a></li>
+                <li><a href="https://rich01623.github.io/standalonemaintenanceschedule/" target="_blank">6 Month Maintenance calendar</a></li>
+            </ul>
+        </div>
+
+        <!-- Driver Data & Payroll Card -->
+        <div class="card">
+            <h2>Driver Data & Payroll</h2>
+            <ul class="link-list" id="driver-data-links">
+                <li><a href="https://rich01623.github.io/frost-fleet-app/" target="_blank">Drivers app</a></li>
+                <li><a href="https://rich01623.github.io/Forklift/" target="_blank">Yard staff drivers app</a></li>
+                <li><a href="https://rich01623.github.io/Fleet-dash/" target="_blank">FTSData Centre</a></li>
+                <li><a href="https://rich01623.github.io/driverbonusdata/" target="_blank">Driver bonus scheme</a></li>
+                <li><a href="https://rich01623.github.io/fleet-tracker/" target="_blank">Fleet tracker</a></li>
+            </ul>
+        </div>
+
+        <!-- MISC Card -->
+        <div class="card">
+            <h2>MISC</h2>
+            <ul class="link-list" id="misc-links">
+                <li><a href="https://rich01623.github.io/workplace/" target="_blank">WPD Portal</a></li>
+                <li><a href="https://rich01623.github.io/internal/#" target="_blank">FTS intranet</a></li>
+                <li><a href="https://rich01623.github.io/kevinreport/" target="_blank">kevins Reports</a></li>
+            </ul>
+        </div>
+
+        <!-- Upcoming Card -->
+        <div class="card">
+            <h2>Upcoming</h2>
+            <ul class="link-list" id="upcoming-links">
+                <li class="empty-state">Holiday calandar</li>
+                <li class="empty-state">Holiday Dashboard</li>
+                <li class="empty-state">staff Profiles</li>
+                <li class="empty-state">Important Documents</li>
+                <li class="empty-state">Driver licenece and cpc</li>
+            </ul>
+        </div>
+
+        <!-- Obsolete Card -->
+        <div class="card">
+            <h2>Obsolete</h2>
+            <ul class="link-list" id="obsolete-links">
+                <li class="empty-state">David Jayes</li>
+                <li><a href="https://rich01623.github.io/Office-dashboard/" target="_blank">daves app</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
